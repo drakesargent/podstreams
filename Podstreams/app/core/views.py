@@ -7,7 +7,7 @@ rue = Blueprint('core',__name__)
 @rue.route('/index.html')
 def index():
     print("accessed root")
-    return "<h1>Hello World</h1>"
+    return render_template("base.html")
 
 @rue.route('/a/')
 def auth():

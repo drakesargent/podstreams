@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    {% block head %}
+    {% block style %}{% endblock %}
+    <title>{% block title %}{% endblock %}PodStreams</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="content">
+    <div id="topBar"></div>
+    {% block content %}{% endblock %}
+    </div>
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2019 by <a href="kenneth.drakesargent.com" target="_blank">
+            Kenneth Drake-Sargent</a>.
+        {% endblock %}
+    </div>
+</body>
