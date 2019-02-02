@@ -1,0 +1,12 @@
+{% extends "nav.html" %}
+{% block title %}
+        Delete [showType]? --
+{% endblock title %}
+{% block navTitle %} Delete Show: [showType] {% endblock %}
+{% block content %}
+<div class="crudForm">
+    <h3>Are you sure you want to delete [showType]?</h3>
+    <input type="button" name="cancel" value="Cancel"/>
+    <input type="button" name="delete" value="Delete"/>
+</div>
+{% endblock %}

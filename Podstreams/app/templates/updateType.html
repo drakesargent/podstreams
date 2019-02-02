@@ -1,0 +1,14 @@
+{% extends "nav.html" %}
+{% block title %}
+        Update Type [type name]--
+{% endblock title %}
+{% block navTitle %} Update Type [type name] {% endblock %}
+{% block content %}
+<div class="crudForm">
+    <form>
+        <input type="text" name="newType" placeholder="[Type Name]" required/>
+        <input type="button" name="cancel" value="Cancel"/>
+        <input type="button" name="submit" value="Update"/>
+    </form>
+</div>
+{% endblock %}

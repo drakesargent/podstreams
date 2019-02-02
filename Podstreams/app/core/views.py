@@ -6,25 +6,37 @@ rue = Blueprint('core',__name__)
 @rue.route('/')
 @rue.route('/index.html')
 def index():
-    print("accessed root")
+    print("home")
     return render_template("home.html")
 
-@rue.route('/a/')
-def auth():
-    print("authorized")
-    return "<h1>Authorized</h1>"
+# Show CRUD Routes
+@rue.route('/addShow/')
+def addShow():
+    print("add Show")
+    return render_template("newShow.html")
 
-@rue.route('/a/add/')
-def add():
-    print("add")
-    return "<h1>Add Form</h1>"
-
-@rue.route('/a/update/')
-def update():
+@rue.route('/updateShow/')
+def updateShow():
     print("update")
-    return "<h1>Update</h1>"
+    return render_template("updateShow.html")
 
-@rue.route('/a/delete/')
-def delete():
-    print("delete")
-    return "<h1>Delete</h1>"
+@rue.route('/deleteShow/')
+def deleteShow():
+    print("delete show")
+    return render_template("deleteShow.html")
+
+# Type CRUD Routes
+@rue.route('/addType/')
+def addType():
+    print("add Type")
+    return render_template("newType.html")
+
+@rue.route('/updateType/')
+def updateType():
+    print("update Type")
+    return render_template("updateType.html")
+
+@rue.route('/deleteType/')
+def deleteType():
+    print("delete Type")
+    return render_template("deleteType.html")
