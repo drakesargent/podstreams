@@ -1,0 +1,37 @@
+{% extends "nav.html" %}
+{% block title %}
+        Home -- 
+{% endblock title %}
+{% block content %}
+ <div id="sideNav">
+     <!-- Authentication test true
+    <div id="authNav">
+        <div id="authMyShows"></div>
+        <div id="authMyTypes"></div>
+        <div id="authAllTypes"></div>
+    </div>
+    -->
+    
+    <!-- Authentication test false -->
+    <div id="pubCategory">
+        <h5>Show Categories</h5>
+        <!-- Use Query for loop for types LI -->
+        <ul class="types">
+            <li class="type">Type A</li>
+            <li class="type">Type B</li>
+            <li class="type">Type C</li>
+        </ul>
+    </div>
+ </div>
+ <div id="shows">
+     <!-- Use Query for loop for shows -->
+     <div class="show">
+        <img class="logo" id="showLogo" src="" alt="Show Logo"/>
+        <ul class="showLinks">
+            <li>Show Page</li>
+            <li>#Follow(s)</li>
+            <li>#Types</li>
+        </ul>
+     </div>
+ </div>
+{% endblock %}
