@@ -8,7 +8,9 @@ from sqlalchemy.orm import sessionmaker
 Base = declarative_base()
 
 ### Class Declarations for Tables ###
-
+class name(Base):
+    __tablename__ = 'name'
+    id = Column(Integer, primary_key = True)
 ### Create db and bind ###
 
 engine = create_engine('sqlite:///data/psdata.db')
