@@ -1,0 +1,1 @@
+Run dbsetup.py before launching server.
