@@ -1,2 +1,3 @@
 /Podstreams/app/models/data/*.db
 .vscode
+*.pyc

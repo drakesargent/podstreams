@@ -1,5 +1,5 @@
 import sys
-from sqlalchemy import Column, ForeignKey, Integer, String, Text, Date
+from sqlalchemy import Column, ForeignKey, Integer, String, Text, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -59,8 +59,8 @@ class Comment(Base):
     user_id = Column(Integer, ForeignKey(User.id), nullable=False)
     show_id = Column(Integer, ForeignKey(Show.id), nullable=False)
     text = Column(Text, nullable=False)
-    createDate = Column(Date, nullable=False)
-    updateDate = Column(Date)
+    createDate = Column(DateTime, nullable=False)
+    updateDate = Column(DateTime)
     user = relationship(User)
     show = relationship(Show)
 
@@ -68,6 +68,3 @@ class Comment(Base):
 
 engine = create_engine('sqlite:///data/psdata.db')
 Base.metadata.create_all(engine)
-
-if __name__ == "__main__":
-    return
